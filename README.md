@@ -255,5 +255,51 @@ const myArrayTimesTwo = myArray.map((num) => num * 2);
 console.log(myArrayTimesTwo); // Output: [2, 4, 6, 8]
 
 
+# Array Destructuring in JavaScript
+
+Array destructuring allows you to extract values from arrays, properties, and objects and assign them to variables in a more concise and readable way.
+
+## Examples
+
+### Example 1
+```javascript
+let num = [1, 2, 3];
+let [a, b, c] = num;
+console.log(a); // 1
+console.log(b); // 2
+console.log(c); // 3
+
+Example 2
+let num = [1, 2, 3];
+let [a, , c] = num;
+console.log(a); // 1
+console.log(c); // 3
+
+Example 3
+let num = [1, 2];
+let [a, b, c = 0] = num;
+console.log(a); // 1
+console.log(c); // 0
+
+## Object Destructuring
+
+Object destructuring allows you to extract values from an object and assign them to variables with the same names as the object's properties.
+
+### Example
+
+```javascript
+let person = { firstName: "Uj", lastName: "Wala" };
+
+// Destructuring assignment
+let { firstName, lastName } = person;
+
+console.log(firstName); // Output: Uj
+console.log(lastName);  // Output: Wala
+
+
+
+
+
+
 
 
