@@ -297,9 +297,72 @@ console.log(firstName); // Output: Uj
 console.log(lastName);  // Output: Wala
 
 
+ Accessing Elements
+1) getElementById(): Selects an element by its unique ID attribute.
+let element = document.getElementById('myId');
 
+2) getElementsByClassName(): Selects elements by their class name.
+let elements = document.getElementsByClassName('myClass');
 
+3)getElementsByTagName(): Selects elements by their HTML tag name.
+let elements = document.getElementsByTagName('tagName');
 
+4)querySelector(): Selects the first element that matches a CSS selector.
+let element = document.querySelector('.className'); // Can be any valid CSS selector
 
+Modifying Element Content
+1) textContent and innerHTML: Change the text or HTML content of an element.
+element.textContent = 'New text content';
+element.innerHTML = '<p>New HTML content</p>';
+
+2)setAttribute(): Set or modify attributes of an element.
+element.setAttribute('attributeName', 'attributeValue');
+Ex:
+<img id="myImage" src="placeholder.jpg" alt="Placeholder Image">
+// Select the image element by its ID
+let imageElement = document.getElementById('myImage');
+
+// Change the src attribute to a new image URL
+imageElement.setAttribute('src', 'newImage.jpg');
+
+// Change the alt attribute to a new description
+imageElement.setAttribute('alt', 'New Image Description');
+
+3)style: Modify CSS styles directly.
+element.style.color = 'blue';
+element.style.backgroundColor = 'yellow';
+
+# DOM Manipulation in JavaScript
+
+## 1. Accessing Elements
+
+- **getElementById()**: Selects an element by its unique ID attribute.
+- **getElementsByClassName()**: Selects elements by their class name.
+- **getElementsByTagName()**: Selects elements by their HTML tag name.
+- **querySelector()**: Selects the first element that matches a CSS selector.
+
+## 2. Modifying Element Content
+
+- **textContent** and **innerHTML**: Change the text or HTML content of an element.
+- **setAttribute()**: Set or modify attributes of an element.
+- **style**: Modify CSS styles directly.
+
+## 3. Creating and Appending Elements
+
+- **createElement()**: Create a new HTML element.
+- **appendChild()**: Add a new child element to an existing element.
+
+## 4. Removing Elements
+
+- **removeChild()**: Remove a child element from its parent.
+
+## 5. Event Handling
+
+- **addEventListener()**: Attach an event listener to an element.
+
+## 6. Traversing the DOM
+
+- **parentNode** and **children**: Access parent and child elements.
+- **querySelectorAll()**: Select multiple elements that match a CSS selector.
 
 
