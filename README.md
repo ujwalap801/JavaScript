@@ -366,3 +366,66 @@ element.style.backgroundColor = 'yellow';
 - **querySelectorAll()**: Select multiple elements that match a CSS selector.
 
 
+# Using Functions as Values
+
+## 1) Assigning Functions to Variables
+```javascript
+let sum = function(){
+    let a = 12;
+    let b = 8;
+    return a + b;
+}
+console.log(sum());
+
+2) Passing Functions as Arguments
+
+function performOperation(a, b, operation) {
+    return operation(a, b);
+}
+
+const add = function(a, b) {
+    return a + b;
+}
+
+const subtract = function(a, b) {
+    return a - b;
+}
+
+console.log(performOperation(5, 3, add));
+console.log(performOperation(5, 3, subtract));
+
+3) Returning Functions from Functions
+function createMul(fac) {
+    return function(num) {
+        return num * fac;
+    }
+}
+
+const double = createMul(2);
+const triple = createMul(3);
+
+console.log(double(4));
+console.log(triple(4));
+
+
+)Storing functions in arrays or objects
+
+const mathOperations ={
+    add: function(a,b){
+        return a+b;
+    },
+    sub:function(a,b)
+    {
+        return a-b;
+    }
+};
+
+console.log(mathOperations.add(5,3));
+console.log(mathOperations.sub(5,3));
+
+5)Arrow function as function values
+const add =(a,b)=>a+b;
+const sub=(a,b)=>a-b;
+console.log(add(2,3));
+console.log(add(5,3));
+
