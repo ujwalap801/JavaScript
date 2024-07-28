@@ -454,6 +454,15 @@ console.log(num1); // 50
 console.log(num2); // 42
 
 
+Reference Values
+Reference values are objects, including arrays and functions, created with constructors or literals. When you assign a reference value to a variable or pass it as an argument to a function, you are working with a reference to the actual object in memory, not a copy of the object itself.
+
+let obj1 = { name: "Alice" };
+let obj2 = obj1;
+obj1.name = "Bob";
+console.log(obj1.name); // Bob
+console.log(obj2.name); // Bob
+
 # JavaScript Array Functions
 
 ## Iterating Over Elements
