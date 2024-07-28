@@ -429,3 +429,121 @@ const sub=(a,b)=>a-b;
 console.log(add(2,3));
 console.log(add(5,3));
 
+
+# Primitive and Reference Values in JavaScript
+
+## Primitive Values
+
+Primitive values are simple, immutable data types. There are 6 primitive data types in JavaScript:
+
+1. **Number**
+2. **String**
+3. **Boolean**
+4. **Undefined**: Represents an uninitialized variable or missing property.
+5. **null**: Represents the absence of any object value or primitive value.
+6. **Symbol**: Represents a unique and immutable value, often used as object property keys.
+
+Primitive values are stored directly in the memory and have a fixed size. When you assign a primitive value to a variable or pass it as an argument to a function, you are working with a copy of the actual value. Therefore, changes to one variable will not affect others holding the same primitive value.
+
+### Example:
+```javascript
+let num1 = 42;
+let num2 = num1;
+num1 = 50;
+console.log(num1); // 50
+console.log(num2); // 42
+
+
+# JavaScript Array Functions
+
+## Iterating Over Elements
+1. **forEach()** - Iterates over each element and applies the function to each element.
+    ```javascript
+    const num = [1, 2, 3];
+    num.forEach(function(number) {
+        console.log(number);
+    });
+    ```
+
+## Mapping
+2. **map()** - Creates a new array by applying a function to each element of the array.
+    ```javascript
+    const num = [1, 2, 3];
+    const squ = num.map(function(number) {
+        return number * 2;
+    });
+
+    console.log(squ); // [2, 4, 6]
+    ```
+
+## Filtering
+3. **filter()** - Creates a new array with all elements that pass a test implemented by the provided function.
+    ```javascript
+    const num = [1, 2, 3, 4, 5];
+    const evenNum = num.filter(function(number) {
+        return number % 2 === 0;
+    });
+
+    console.log(evenNum); // [2, 4]
+    ```
+
+## Reducing
+4. **reduce()** - Applies a function against an accumulator and each element in the array to reduce it to a single value.
+    ```javascript
+    const num = [1, 2, 3, 4, 5];
+    const sum = num.reduce(function(accumulator, currentValue) {
+        return accumulator + currentValue;
+    });
+
+    console.log(sum); // 15
+    ```
+
+## Modifying Arrays
+5. **find()** - Returns the first element in an array that satisfies the provided testing function.
+    ```javascript
+    const num = [1, 2, 3, 4, 5];
+    const found = num.find(function(number) {
+        return number > 2;
+    });
+
+    console.log(found); // 3
+    ```
+
+6. **indexOf()** - Returns the first index at which the given element is found in the array or -1 if not found.
+    ```javascript
+    const fruits = ["apple", "banana", "cherry"];
+    console.log(fruits.indexOf("banana")); // 1
+    ```
+
+7. **includes()** - Checks if an array contains an element, returning true if it does, and false otherwise.
+    ```javascript
+    const fruits = ["apple", "banana", "cherry"];
+    console.log(fruits.includes("banana")); // true
+    ```
+
+8. **every()** - Tests whether all elements in the array pass the provided function's test.
+    ```javascript
+    const num = [2, 4, 6];
+    const allEven = num.every(function(number) {
+        return number % 2 === 0;
+    });
+
+    console.log(allEven); // true
+    ```
+
+9. **some()** - Tests whether at least one element in the array passes the provided function's test.
+    ```javascript
+    const num = [2, 4, 1];
+    const someEven = num.some(function(number) {
+        return number % 2 === 0;
+    });
+
+    console.log(someEven); // true
+
+
+10. **sort()** - Sorts the elements of an array and returns the sorted array.
+    ```javascript
+    const num = [2, 4, 1];
+    console.log(num.sort()); // [1, 2, 4]
+    ```
+
